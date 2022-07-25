@@ -1,1 +1,1 @@
-export type MyReadonly2<T, K extends keyof T = keyof T> = {readonly [k in keyof T] : T[k];} & Omit<T,K>
+export type MyReadonly2<T, K extends keyof T = keyof T> = Readonly<Pick<T, K>> & Omit<T, K>
